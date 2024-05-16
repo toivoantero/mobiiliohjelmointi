@@ -4,10 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FlashMessage from "react-native-flash-message";
 import { Ionicons } from '@expo/vector-icons';
-import { Varvaa } from './Varvaa';
-import { Retkikunta } from './Retkikunta';
-import { Kamera } from './Kamera';
-import { Saa } from './Saa';
+import { Varvaa } from './components/Varvaa';
+import { Retkikunta } from './components/Retkikunta';
+import { Kamera } from './components/Kamera';
+import { Saa } from './components/Saa';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Text, TextInput, Image, View, Alert, FlatList, Pressable } from 'react-native';
 import { SelectList } from 'react-native-dropdown-select-list';
 import { showMessage } from "react-native-flash-message";
-import { db } from './luoTietokanta';
-import { styles } from './styles';
+import { db } from '../luoTietokanta';
+import { styles } from '../styles/styles';
 
 export function Retkikunta() {
 

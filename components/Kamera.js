@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Text, Image, Button, View } from 'react-native';
 import { Camera } from 'expo-camera';
-import { styles } from './styles';
+import { styles } from '../styles/styles';
 
 export function Kamera({ navigation }) {
   const [hasCameraPermission, setPermission] = useState(null);

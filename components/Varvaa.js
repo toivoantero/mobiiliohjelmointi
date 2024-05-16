@@ -3,8 +3,8 @@ import { Text, TextInput, View, Pressable } from 'react-native';
 import { SelectList } from 'react-native-dropdown-select-list';
 import { useRoute } from "@react-navigation/native"
 import { showMessage } from "react-native-flash-message";
-import { db } from './luoTietokanta';
-import { styles } from './styles';
+import { db } from '../luoTietokanta';
+import { styles } from '../styles/styles';
 
 export function Varvaa({ navigation }) {
 

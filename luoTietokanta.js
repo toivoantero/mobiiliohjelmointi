@@ -4,6 +4,7 @@ export const db = SQLite.openDatabase('pelivalikko.db');
 
 db.transaction(tx => {
   tx.executeSql('CREATE TABLE IF NOT EXISTS tyotehtava (id INTEGER PRIMARY KEY NOT NULL, nimike TEXT, kuukausipalkka INTEGER);');
+  tx.executeSql('DELETE FROM tyotehtava;');
   tx.executeSql('INSERT INTO tyotehtava (nimike, kuukausipalkka) VALUES ("Kokki", 2100);');
   tx.executeSql('INSERT INTO tyotehtava (nimike, kuukausipalkka) VALUES ("Suunnistaja", 3000);');
   tx.executeSql('INSERT INTO tyotehtava (nimike, kuukausipalkka) VALUES ("Kartoittaja", 2500);');

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, FlatList, TextInput, Pressable, Alert } from 'react-native';
-import { styles } from './styles';
+import { styles } from '../styles/styles';
 
 export function Saa() {
 
