@@ -5,9 +5,7 @@ import { styles } from './styles';
 
 export function Kamera({ navigation }) {
   const [hasCameraPermission, setPermission] = useState(null);
-  const [photoName, setPhotoName] = useState('');
-  const [pulla, setPulla] = useState('kaneli');
-
+  const [kuvaPolku, setKuvaPolku] = useState('');
   const camera = useRef(null);
 
   useEffect(() => {
@@ -22,12 +20,8 @@ export function Kamera({ navigation }) {
   const snap = async () => {
     if (camera) {
       const photo = await camera.current.takePictureAsync({ base64: true });
-      setPhotoName(photo.uri);
+      setKuvaPolku(photo.uri);
     }
-  };
-
-  const testi = () => {
-    console.log(photoName);
   };
 
   return (
@@ -41,12 +35,12 @@ export function Kamera({ navigation }) {
               <View style={{ height: 30 }} />
               <Button
                 title="Hyväksy kuva"
-                onPress={() => navigation.navigate("Tietojen syöttö", { polku: photoName })}
+                onPress={() => navigation.navigate("Tietojen syöttö", { polku: kuvaPolku })}
               />
             </View>
             <View style={{ flex: 1 }}>
-              {photoName
-                ? <Image style={{ flex: 1 }} source={{ uri: photoName }} />
+              {kuvaPolku
+                ? <Image style={{ flex: 1 }} source={{ uri: kuvaPolku }} />
                 : <Text style={{ flex: 1 }}>File</Text>}
             </View>
           </View>
@@ -55,5 +49,4 @@ export function Kamera({ navigation }) {
         )}
     </View>
   );
-
 }
